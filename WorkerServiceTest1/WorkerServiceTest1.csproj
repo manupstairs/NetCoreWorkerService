@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <Nullable>enable</Nullable>
+    <UserSecretsId>dotnet-WorkerServiceTest1-D619AE6E-A4CB-4916-9420-4F77BBA04A63</UserSecretsId>
+	  <OutputType>exe</OutputType>
+	  <PublishSingleFile>true</PublishSingleFile>
+	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	  <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
+  </ItemGroup>
+</Project>
