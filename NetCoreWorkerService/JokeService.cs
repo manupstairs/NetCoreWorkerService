@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace WorkerServiceTest1
+namespace NetCoreWorkerService
 {
 
     public class JokeService
@@ -11,7 +11,7 @@ namespace WorkerServiceTest1
         public static int Count { get; set; }
         public string GetJoke()
         {
-            return  $"No joke here... {++Count}";
+            return $"No joke here... {++Count}";
         }
     }
 }

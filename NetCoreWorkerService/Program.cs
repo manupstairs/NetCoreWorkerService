@@ -5,16 +5,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WorkerServiceTest1
+namespace NetCoreWorkerService
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             CreateHostBuilder(args)
-                .UseWindowsService(o=>
+                .UseWindowsService(o =>
             {
-                o.ServiceName = ".NET Sample Service";  
+                o.ServiceName = ".NET Sample Service";
             })
                 .Build()
                 .Run();

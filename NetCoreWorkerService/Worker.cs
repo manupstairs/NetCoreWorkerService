@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace WorkerServiceTest1
+namespace NetCoreWorkerService
 {
     public class Worker : BackgroundService
     {
