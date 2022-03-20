@@ -11,11 +11,11 @@ namespace NetCoreWorkerService
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-        private readonly JokeService _jokeSrvice;
+        private readonly LieFlatService _lieFlatSrvice;
 
-        public Worker(JokeService jokeService, ILogger<Worker> logger)
+        public Worker(LieFlatService lieFlatService, ILogger<Worker> logger)
         {
-            _jokeSrvice = jokeService;
+            _lieFlatSrvice = lieFlatService;
             _logger = logger;
         }
 
@@ -23,8 +23,8 @@ namespace NetCoreWorkerService
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                string joke = _jokeSrvice.GetJoke();
-                _logger.LogWarning(joke);
+                string message = _lieFlatSrvice.LieFlat();
+                _logger.LogWarning(message);
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
                 await Task.Delay(1000, stoppingToken);
             }

@@ -14,7 +14,7 @@ namespace NetCoreWorkerService
             CreateHostBuilder(args)
                 .UseWindowsService(o =>
             {
-                o.ServiceName = ".NET Sample Service";
+                o.ServiceName = "Lie Flat Service";
             })
                 .Build()
                 .Run();
@@ -25,7 +25,7 @@ namespace NetCoreWorkerService
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddHostedService<Worker>();
-                    services.AddTransient<JokeService>();
+                    services.AddSingleton<LieFlatService>();
                 });
     }
 }

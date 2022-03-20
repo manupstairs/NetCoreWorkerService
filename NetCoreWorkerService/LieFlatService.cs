@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 namespace NetCoreWorkerService
 {
 
-    public class JokeService
+    public class LieFlatService
     {
         public static int Count { get; set; }
-        public string GetJoke()
+        public string LieFlat()
         {
-            return $"No joke here... {++Count}";
+            return $"Lie flat and play PS4 & Switch... {++Count}";
         }
     }
 }
